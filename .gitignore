@@ -1,0 +1,12 @@
+# exclude every job in jenkins but keep folder
+jobs/*
+!jobs/.gitkeep
+
+# exclude all maven dependencies of already built jobs but keep folder
+m2_mvn_deps/*
+!m2_mvn_deps/.gitkeep
+
+# exclude all download dependencies (a.k JDK, MAVEN...) but keep folder
+downloads/*
+!downloads/.gitkeep
+
