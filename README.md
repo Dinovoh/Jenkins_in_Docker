@@ -5,6 +5,7 @@ I. Installed:
  - wget
 
 Make sure to go throuh Post-installation steps for Linux to work better with Docker. https://docs.docker.com/install/linux/linux-postinstall/
+And you may need to reboot after making these Post-installation steps on some systems.
 
 II. After cloning this repo you need to download:
 - Oracle JDK 1.8.0_201 
