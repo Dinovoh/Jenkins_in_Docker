@@ -26,12 +26,12 @@ Default passwords -> dinovoh
  Make shure you are in the root of this project (Jenkins directory) and Start all docker containers in the next order:
 1) To start Jenkins:
 ```sh
-docker run -p 8080:8080 -v `pwd`/downloads:/var/jenkins_home/downloads -v `pwd`/jobs:/var/jenkins_home/jobs/ -v `pwd`/m2_mvn_deps:/var/jenkins_home/.m2/repository/ --rm --name myjenkins -e SONARQUBE_HOST=http://172.18.0.2:9000 myjenkins:latest
+docker run -p 8080:8080 -v `pwd`/downloads:/var/jenkins_home/downloads -v `pwd`/jobs:/var/jenkins_home/jobs/ -v `pwd`/m2_mvn_deps:/var/jenkins_home/.m2/repository/ --rm --name myjenkins -e SONARQUBE_HOST=http://172.18.0.3:9000 myjenkins:latest
 ```
 
 2) To start SonarQube:
 ```sh
-docker run -d -p 9000:9000 --rm --name mysonar sonarqube
+docker run -d -p 9000:9000 --rm --name mysonar sonarqube:lts
 ```
 3) To start jfrog Artifactory:
 ```sh
